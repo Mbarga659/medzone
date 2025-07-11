@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacie - MedZone</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="material-symbols-outlined me-2">local_pharmacy</span>
+                MedZone
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="pharmacie.html">Pharmacie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#doctors">Médecins</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Connexion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light btn-sm ms-2" href="register.html">Inscription</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Espace pour le contenu principal -->
+    <main class="main-content">
+
+        <!-- Search Section -->
+        <section class="search-container">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white text-center mb-4">Rechercher un produit</h2>
+                        <form class="search-form" action="recherche.html" method="GET">
+                            <div class="input-group">
+                                <input type="text" 
+                                       class="form-control" 
+                                       name="q" 
+                                       placeholder="Nom du médicament, fabricant..." 
+                                       required>
+                                <button class="btn btn-light" type="submit">
+                                    <span class="material-symbols-outlined">search</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-lg-8">
+                        <h2 class="display-5 fw-bold">Nos Produits</h2>
+                        <p class="lead text-muted">Découvrez notre large gamme de produits pharmaceutiques</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <span class="material-symbols-outlined me-2">filter_list</span>
+                                Filtrer par catégorie
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="pharmacie.html">Toutes les catégories</a></li>
+                                <li><a class="dropdown-item" href="pharmacie.html?categorie=1">Analgésiques</a></li>
+                                <li><a class="dropdown-item" href="pharmacie.html?categorie=2">Antibiotiques</a></li>
+                                <li><a class="dropdown-item" href="pharmacie.html?categorie=3">Vitamines</a></li>
+                                <li><a class="dropdown-item" href="pharmacie.html?categorie=4">Soins de la peau</a></li>
+                                <li><a class="dropdown-item" href="pharmacie.html?categorie=5">Premiers soins</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Produit 1 -->
+                    <div class="col-lg-3 col-md-6" data-categorie="analgesiques">
+                        <div class="card product-card h-100">
+                            <div class="position-relative">
+                                <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                    <img src="assets/img/paracetamol.jpg" alt="Paracétamol 500mg" style="max-height: 180px; max-width: 100%; object-fit: contain;">
+                                </div>
+                            </div>
+                            
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Paracétamol 500mg</h5>
+                                <p class="text-muted small mb-2">Analgésiques</p>
+                                <p class="card-text text-muted small flex-grow-1">
+                                    Antidouleur et antipyrétique pour soulager la douleur et la fièvre...
+                                </p>
+                                
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="product-price">3 603 fcfa</span>
+                                    </div>
+                                    
+                                    <div class="d-flex gap-2">
+                                        <a href="login.html" class="btn btn-outline-primary btn-sm flex-fill">
+                                            <span class="material-symbols-outlined me-1">login</span>
+                                            Se connecter
+                                        </a>
+                                        
+                                        <button class="btn btn-outline-secondary btn-sm" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-target="#productModal1">
+                                            <span class="material-symbols-outlined">info</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 2 -->
+                    <div class="col-lg-3 col-md-6" data-categorie="analgesiques">
+                        <div class="card product-card h-100">
+                            <div class="position-relative">
+                                <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                    <img src="assets/img/ibuprofene.jpg" alt="Ibuprofène 400mg" style="max-height: 180px; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="position-absolute top-0 end-0 m-2">
+                                    <span class="badge bg-danger">Promo</span>
+                                </div>
+                            </div>
+                            
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Ibuprofène 400mg</h5>
+                                <p class="text-muted small mb-2">Analgésiques</p>
+                                <p class="card-text text-muted small flex-grow-1">
+                                    Anti-inflammatoire non stéroïdien pour soulager la douleur...
+                                </p>
+                                
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="product-price promo me-2">3 799 fcfa</span>
+                                        <span class="product-price original">4 454 fcfa</span>
+                                    </div>
+                                    
+                                    <div class="d-flex gap-2">
+                                        <a href="login.html" class="btn btn-outline-primary btn-sm flex-fill">
+                                            <span class="material-symbols-outlined me-1">login</span>
+                                            Se connecter
+                                        </a>
+                                        
+                                        <button class="btn btn-outline-secondary btn-sm" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-target="#productModal2">
+                                            <span class="material-symbols-outlined">info</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 3 -->
+                    <div class="col-lg-3 col-md-6" data-categorie="vitamines">
+                        <div class="card product-card h-100">
+                            <div class="position-relative">
+                                <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                    <img src="assets/img/vitamine-c.jpg" alt="Vitamine C 1000mg" style="max-height: 180px; max-width: 100%; object-fit: contain;">
+                                </div>
+                            </div>
+                            
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Vitamine C 1000mg</h5>
+                                <p class="text-muted small mb-2">Vitamines</p>
+                                <p class="card-text text-muted small flex-grow-1">
+                                    Complément vitaminique pour renforcer le système immunitaire...
+                                </p>
+                                
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="product-price">8 460 fcfa</span>
+                                    </div>
+                                    
+                                    <div class="d-flex gap-2">
+                                        <a href="login.html" class="btn btn-outline-primary btn-sm flex-fill">
+                                            <span class="material-symbols-outlined me-1">login</span>
+                                            Se connecter
+                                        </a>
+                                        
+                                        <button class="btn btn-outline-secondary btn-sm" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-target="#productModal3">
+                                            <span class="material-symbols-outlined">info</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 4 -->
+                    <div class="col-lg-3 col-md-6" data-categorie="soins">
+                        <div class="card product-card h-100">
+                            <div class="position-relative">
+                                <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                    <img src="assets/img/creme-hydratante.jpg" alt="Crème hydratante" style="max-height: 180px; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="position-absolute top-0 start-0 m-2">
+                                    <span class="badge bg-warning text-dark">Ordonnance requise</span>
+                                </div>
+                            </div>
+                            
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Crème hydratante</h5>
+                                <p class="text-muted small mb-2">Soins de la peau</p>
+                                <p class="card-text text-muted small flex-grow-1">
+                                    Hydratation intensive de la peau pour tous types de peau...
+                                </p>
+                                
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="product-price">10 153 fcfa</span>
+                                    </div>
+                                    
+                                    <div class="d-flex gap-2">
+                                        <a href="login.html" class="btn btn-outline-primary btn-sm flex-fill">
+                                            <span class="material-symbols-outlined me-1">login</span>
+                                            Se connecter
+                                        </a>
+                                        
+                                        <button class="btn btn-outline-secondary btn-sm" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-target="#productModal4">
+                                            <span class="material-symbols-outlined">info</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nouveau Produit : Doliprane 500 mg -->
+                    <div class="col-lg-3 col-md-6" data-categorie="analgesiques">
+                        <div class="card product-card h-100">
+                            <div class="position-relative">
+                                <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                    <img src="assets/img/doliprane.jpg" alt="Doliprane 500 mg" style="max-height: 180px; max-width: 100%; object-fit: contain;">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Doliprane 500 mg</h5>
+                                <p class="text-muted small mb-2">Analgésique</p>
+                                <p class="card-text text-muted small flex-grow-1">
+                                    Antipyrétique (contre la fièvre) et analgésique léger à modéré
+                                </p>
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="product-price">9 825 fcfa</span>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <a href="login.html" class="btn btn-outline-primary btn-sm flex-fill">
+                                            <span class="material-symbols-outlined me-1">login</span>
+                                            Se connecter
+                                        </a>
+                                        <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#productModalDoliprane">
+                                            <span class="material-symbols-outlined">info</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nouveau Produit : Baume Francoi -->
+                    <div class="col-lg-3 col-md-6" data-categorie="soins">
+                        <div class="card product-card h-100">
+                            <div class="position-relative">
+                                <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                    <img src="assets/img/baume.jpg" alt="Baume Francoi" style="max-height: 180px; max-width: 100%; object-fit: contain;">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Baume Francoi</h5>
+                                <p class="text-muted small mb-2">Soins</p>
+                                <p class="card-text text-muted small flex-grow-1">
+                                    Contre toux, rhume, grippe, douleurs musculaires et articulaires, maux de tête, sciatiques, etc
+                                </p>
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="product-price">500fcfa</span>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <a href="login.html" class="btn btn-outline-primary btn-sm flex-fill">
+                                            <span class="material-symbols-outlined me-1">login</span>
+                                            Se connecter
+                                        </a>
+                                        <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#productModalBaume">
+                                            <span class="material-symbols-outlined">info</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h3 class="text-center mb-4">Nos Catégories</h3>
+                <div class="row g-4">
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <a href="pharmacie.html?categorie=1" class="text-decoration-none">
+                            <div class="card text-center h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                                        <img src="assets/img/cat-analgesiques.jpg" alt="Analgésiques" style="width:48px;height:48px;object-fit:contain;">
+                                    </div>
+                                    <h6 class="card-title">Analgésiques</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <a href="pharmacie.html?categorie=2" class="text-decoration-none">
+                            <div class="card text-center h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                                        <img src="assets/img/cat-antibiotiques.jpg" alt="Antibiotiques" style="width:48px;height:48px;object-fit:contain;">
+                                    </div>
+                                    <h6 class="card-title">Antibiotiques</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <a href="pharmacie.html?categorie=3" class="text-decoration-none">
+                            <div class="card text-center h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                                        <img src="assets/img/cat-vitamines.jpg" alt="Vitamines" style="width:48px;height:48px;object-fit:contain;">
+                                    </div>
+                                    <h6 class="card-title">Vitamines</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <a href="pharmacie.html?categorie=4" class="text-decoration-none">
+                            <div class="card text-center h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                                        <img src="assets/img/cat-soins.jpg" alt="Soins de la peau" style="width:48px;height:48px;object-fit:contain;">
+                                    </div>
+                                    <h6 class="card-title">Soins de la peau</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <a href="pharmacie.html?categorie=5" class="text-decoration-none">
+                            <div class="card text-center h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                                        <img src="assets/img/cat-premiers-soins.jpg" alt="Premiers soins" style="width:48px;height:48px;object-fit:contain;">
+                                    </div>
+                                    <h6 class="card-title">Premiers soins</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">
+                        <span class="material-symbols-outlined me-2">local_pharmacy</span>
+                        MedZone
+                    </h5>
+                    <p class="text-muted">
+                        Votre pharmacie en ligne de confiance. Nous vous proposons des produits de qualité 
+                        et un service client exceptionnel pour tous vos besoins de santé.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="pharmacie.html" class="text-muted text-decoration-none">Pharmacie</a></li>
+                        <li><a href="index.html#doctors" class="text-muted text-decoration-none">Médecins</a></li>
+                        <li><a href="index.html#rdv" class="text-muted text-decoration-none">Rendez-vous</a></li>
+                        <li><a href="index.html#contact" class="text-muted text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="mb-3">Informations</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">À propos</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Conditions d'utilisation</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Politique de confidentialité</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <h6 class="mb-3">Contact</h6>
+                    <div class="d-flex mb-2">
+                        <span class="material-symbols-outlined me-2">location_on</span>
+                        <span class="text-muted">(Coron)Yaoundé, Cameroun</span>
+                    </div>
+                    <div class="d-flex mb-2">
+                        <span class="material-symbols-outlined me-2">phone</span>
+                        <span class="text-muted">+237 659 417 568</span>
+                    </div>
+                    <div class="d-flex mb-2">
+                        <span class="material-symbols-outlined me-2">email</span>
+                        <span class="text-muted">mbargacharles53@gmail.com</span>
+                    </div>
+                    <div class="d-flex">
+                        <span class="material-symbols-outlined me-2">schedule</span>
+                        <span class="text-muted">Lun-Sam: 8h-20h</span>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">
+                        &copy; 2024 MedZone. Tous droits réservés.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-muted mb-0">
+                        Développé avec <span class="text-danger">❤</span> pour votre santé
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 
